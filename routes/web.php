@@ -34,3 +34,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 
 
 });
+
+
+//////
+Route::get('/items', 'Item\ItemController@item')->name('items');;
+
+Route::resource('items', 'Item\ItemController');
+
+Route::get('/search', 'Item\ItemController@search');

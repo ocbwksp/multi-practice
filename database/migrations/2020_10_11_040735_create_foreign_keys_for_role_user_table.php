@@ -4,8 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-
+Schema::disableForeignKeyConstraints();
 App\User::truncate();
+Schema::enableForeignKeyConstraints();
 
 
 class CreateForeignKeysForRoleUserTable extends Migration
